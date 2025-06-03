@@ -1,0 +1,45 @@
+﻿<Window x:Class="WaitListApp.Views.InputPopup"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Register New Entry" Height="350" Width="500" WindowStartupLocation="CenterScreen"
+        Background="#1e1e2f" Foreground="White" FontFamily="Segoe UI">
+    <Grid Margin="20">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="140"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+
+        <!-- Name -->
+        <Label Content="Name:" Grid.Row="0" Grid.Column="0" VerticalAlignment="Center" Margin="0,10" Foreground="DarkSeaGreen"/>
+        <TextBox x:Name="txtName" Grid.Row="0" Grid.Column="1" Margin="0,10" Height="28" />
+
+        <!-- Email -->
+        <Label Content="Email:" Grid.Row="1" Grid.Column="0" VerticalAlignment="Center" Margin="0,10" Foreground="DarkSeaGreen"/>
+        <TextBox x:Name="txtEmail" Grid.Row="1" Grid.Column="1" Margin="0,10" Height="28"/>
+
+        <!-- Phone Number -->
+        <Label Content="Phone Number:" Grid.Row="2" Grid.Column="0" VerticalAlignment="Center" Margin="0,10" Foreground="DarkSeaGreen"/>
+        <TextBox x:Name="txtPhNo" Grid.Row="2" Grid.Column="1" Margin="0,10" Height="28"/>
+
+        <!-- Status -->
+        <Label Content="Status:" Grid.Row="3" Grid.Column="0" VerticalAlignment="Center" Margin="0,10" Foreground="DarkSeaGreen"/>
+        <ComboBox x:Name="cbStatus" Grid.Row="3" Grid.Column="1" Margin="0,10" Height="28">
+            <ComboBoxItem Content="Waiting"/>
+            <ComboBoxItem Content="Completed"/>
+            <ComboBoxItem Content="Cancelled"/>
+        </ComboBox>
+
+        <!-- Button -->
+        <Button Content="Register" Grid.Row="4" Grid.ColumnSpan="2" Height="35" Margin="0,20,0,0"
+                HorizontalAlignment="Center" Width="120" Background="#007ACC" Foreground="White"
+                Click="Button_Click"/>
+    </Grid>
+</Window>
