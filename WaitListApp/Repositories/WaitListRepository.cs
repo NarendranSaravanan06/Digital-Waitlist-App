@@ -140,5 +140,35 @@ namespace WaitListApp.Repositories
                 }
             }
         }
+        public List<WaitListModel> GetTodayEntries()
+        {
+            var conn = DbConnection.GetConnection();
+            conn.Open();
+
+            string query = "SELECT * FROM waitlist WHERE date = @today ORDER BY intime";
+            var cmd = new NpgsqlCommand(query, conn);
+            cmd.Parameters.AddWithValue("today", DateTime.Today);
+
+            var reader = cmd.ExecuteReader();
+            var list = new List<WaitListModel>();
+
+            while (reader.Read())
+            {
+                list.Add(new WaitListModel
+                {
+                    Id = Convert.ToInt32(reader["id"]),
+                    Name = reader["name"].ToString(),
+                    Email = reader["email"].ToString(),
+                    PhoneNo = reader["phoneno"].ToString(),
+                    Status = reader["status"].ToString(),
+                    InTime = TimeSpan.Parse(reader["intime"].ToString()),
+                    OutTime = reader["outtime"] == DBNull.Value ? (TimeSpan?)null : TimeSpan.Parse(reader["outtime"].ToString()),
+                    Date = Convert.ToDateTime(reader["date"])
+                });
+            }
+
+            return list;
+        }
+
     }
 }

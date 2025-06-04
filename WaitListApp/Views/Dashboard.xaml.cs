@@ -16,16 +16,16 @@ namespace WaitListApp.Views
         public Dashboard()
         {
             InitializeComponent();
-            LoadData();
+            LoadTodayData();
         }
 
-        private void LoadData()
+        private void LoadTodayData()
         {
             var repo = new WaitlistRepository();
-            var data = repo.GetAll();
+            var todayList = repo.GetTodayEntries();
 
             waitlist = new ObservableCollection<WaitListModel>(
-                data.Select((entry, index) =>
+                todayList.Select((entry, index) =>
                 {
                     var model = new WaitListModel
                     {
@@ -46,7 +46,7 @@ namespace WaitListApp.Views
             dgWaitlist.ItemsSource = waitlist;
         }
 
-        private void Refresh_click(object sender, RoutedEventArgs e) => LoadData();
+        private void Refresh_click(object sender, RoutedEventArgs e) => LoadTodayData();
 
         private void Add_Click(object sender, RoutedEventArgs e)
         {
@@ -65,7 +65,7 @@ namespace WaitListApp.Views
                 };
 
                 new WaitlistRepository().Add(newEntry);
-                LoadData();
+                LoadTodayData();
             }
         }
 
@@ -78,7 +78,7 @@ namespace WaitListApp.Views
                 return;
             }
 
-            var popup = new InputPopup(selected); // Pass existing data
+            var popup = new InputPopup(selected);
             if (popup.ShowDialog() == true)
             {
                 var updatedEntry = new WaitListModel
@@ -94,7 +94,7 @@ namespace WaitListApp.Views
                 };
 
                 new WaitlistRepository().Update(updatedEntry);
-                LoadData();
+                LoadTodayData();
                 MessageBox.Show("Updated successfully!");
             }
         }
@@ -106,14 +106,12 @@ namespace WaitListApp.Views
                 var shouldUpdateOutTime = false;
                 var updatedOutTime = item.OutTime;
 
-                // Case 1: Status changed from Waiting → Completed/Cancelled
                 if ((item.OriginalStatus == "Waiting") &&
                     (item.Status == "Completed" || item.Status == "Cancelled"))
                 {
                     shouldUpdateOutTime = true;
                     updatedOutTime = DateTime.Now.TimeOfDay;
                 }
-                // Case 2: Manual change in OutTime (by comparing original value)
                 else if (item.OutTime != item.OriginalOutTime)
                 {
                     shouldUpdateOutTime = true;
@@ -135,9 +133,8 @@ namespace WaitListApp.Views
             }
 
             MessageBox.Show("Updated successfully!");
-            LoadData();
+            LoadTodayData();
         }
-
 
         private void Delete_Click(object sender, RoutedEventArgs e)
         {
@@ -155,7 +152,7 @@ namespace WaitListApp.Views
             if (confirm == MessageBoxResult.Yes)
             {
                 new WaitlistRepository().Delete(selectedItem.Id);
-                LoadData();
+                LoadTodayData();
                 MessageBox.Show("Deleted successfully!");
             }
         }

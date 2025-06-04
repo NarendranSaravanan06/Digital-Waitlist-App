@@ -3,64 +3,20 @@
   "WorkspaceRootPath": "C:\\Users\\e632\\Documents\\GitHub\\Digital-Waitlist-App\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{8F2B0D16-3F9E-4027-B3F6-D84B899BDC71}|WaitListApp\\WaitListApp.csproj|c:\\users\\e632\\documents\\github\\digital-waitlist-app\\waitlistapp\\views\\inputpopup.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{8F2B0D16-3F9E-4027-B3F6-D84B899BDC71}|WaitListApp\\WaitListApp.csproj|solutionrelative:waitlistapp\\views\\inputpopup.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{8F2B0D16-3F9E-4027-B3F6-D84B899BDC71}|WaitListApp\\WaitListApp.csproj|C:\\Users\\e632\\Documents\\GitHub\\Digital-Waitlist-App\\waitlistapp\\views\\login.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
-      "RelativeMoniker": "D:0:0:{8F2B0D16-3F9E-4027-B3F6-D84B899BDC71}|WaitListApp\\WaitListApp.csproj|solutionrelative:waitlistapp\\views\\login.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{8F2B0D16-3F9E-4027-B3F6-D84B899BDC71}|WaitListApp\\WaitListApp.csproj|C:\\Users\\e632\\Documents\\GitHub\\Digital-Waitlist-App\\waitlistapp\\views\\login.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{8F2B0D16-3F9E-4027-B3F6-D84B899BDC71}|WaitListApp\\WaitListApp.csproj|solutionrelative:waitlistapp\\views\\login.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{8F2B0D16-3F9E-4027-B3F6-D84B899BDC71}|WaitListApp\\WaitListApp.csproj|C:\\Users\\e632\\Documents\\GitHub\\Digital-Waitlist-App\\waitlistapp\\repositories\\userrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{8F2B0D16-3F9E-4027-B3F6-D84B899BDC71}|WaitListApp\\WaitListApp.csproj|solutionrelative:waitlistapp\\repositories\\userrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{8F2B0D16-3F9E-4027-B3F6-D84B899BDC71}|WaitListApp\\WaitListApp.csproj|C:\\Users\\e632\\Documents\\GitHub\\Digital-Waitlist-App\\waitlistapp\\models\\usersmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{8F2B0D16-3F9E-4027-B3F6-D84B899BDC71}|WaitListApp\\WaitListApp.csproj|solutionrelative:waitlistapp\\models\\usersmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{8F2B0D16-3F9E-4027-B3F6-D84B899BDC71}|WaitListApp\\WaitListApp.csproj|C:\\Users\\e632\\Documents\\GitHub\\Digital-Waitlist-App\\waitlistapp\\views\\inputpopup.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
-      "RelativeMoniker": "D:0:0:{8F2B0D16-3F9E-4027-B3F6-D84B899BDC71}|WaitListApp\\WaitListApp.csproj|solutionrelative:waitlistapp\\views\\inputpopup.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{8F2B0D16-3F9E-4027-B3F6-D84B899BDC71}|WaitListApp\\WaitListApp.csproj|C:\\Users\\e632\\Documents\\GitHub\\Digital-Waitlist-App\\waitlistapp\\views\\dashboard.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{8F2B0D16-3F9E-4027-B3F6-D84B899BDC71}|WaitListApp\\WaitListApp.csproj|c:\\users\\e632\\documents\\github\\digital-waitlist-app\\waitlistapp\\views\\dashboard.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{8F2B0D16-3F9E-4027-B3F6-D84B899BDC71}|WaitListApp\\WaitListApp.csproj|solutionrelative:waitlistapp\\views\\dashboard.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{8F2B0D16-3F9E-4027-B3F6-D84B899BDC71}|WaitListApp\\WaitListApp.csproj|C:\\Users\\e632\\Documents\\GitHub\\Digital-Waitlist-App\\waitlistapp\\views\\dashboard.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
-      "RelativeMoniker": "D:0:0:{8F2B0D16-3F9E-4027-B3F6-D84B899BDC71}|WaitListApp\\WaitListApp.csproj|solutionrelative:waitlistapp\\views\\dashboard.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{8F2B0D16-3F9E-4027-B3F6-D84B899BDC71}|WaitListApp\\WaitListApp.csproj|C:\\Users\\e632\\Documents\\GitHub\\Digital-Waitlist-App\\waitlistapp\\repositories\\waitlistrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{8F2B0D16-3F9E-4027-B3F6-D84B899BDC71}|WaitListApp\\WaitListApp.csproj|c:\\users\\e632\\documents\\github\\digital-waitlist-app\\waitlistapp\\repositories\\waitlistrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{8F2B0D16-3F9E-4027-B3F6-D84B899BDC71}|WaitListApp\\WaitListApp.csproj|solutionrelative:waitlistapp\\repositories\\waitlistrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{8F2B0D16-3F9E-4027-B3F6-D84B899BDC71}|WaitListApp\\WaitListApp.csproj|C:\\Users\\e632\\Documents\\GitHub\\Digital-Waitlist-App\\waitlistapp\\models\\waitlistmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{8F2B0D16-3F9E-4027-B3F6-D84B899BDC71}|WaitListApp\\WaitListApp.csproj|solutionrelative:waitlistapp\\models\\waitlistmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{8F2B0D16-3F9E-4027-B3F6-D84B899BDC71}|WaitListApp\\WaitListApp.csproj|c:\\users\\e632\\documents\\github\\digital-waitlist-app\\waitlistapp\\repositories\\userrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8F2B0D16-3F9E-4027-B3F6-D84B899BDC71}|WaitListApp\\WaitListApp.csproj|solutionrelative:waitlistapp\\repositories\\userrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{8F2B0D16-3F9E-4027-B3F6-D84B899BDC71}|WaitListApp\\WaitListApp.csproj|C:\\Users\\e632\\Documents\\GitHub\\Digital-Waitlist-App\\waitlistapp\\data\\constants.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{8F2B0D16-3F9E-4027-B3F6-D84B899BDC71}|WaitListApp\\WaitListApp.csproj|solutionrelative:waitlistapp\\data\\constants.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{8F2B0D16-3F9E-4027-B3F6-D84B899BDC71}|WaitListApp\\WaitListApp.csproj|C:\\Users\\e632\\Documents\\GitHub\\Digital-Waitlist-App\\waitlistapp\\data\\dbconnection.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{8F2B0D16-3F9E-4027-B3F6-D84B899BDC71}|WaitListApp\\WaitListApp.csproj|solutionrelative:waitlistapp\\data\\dbconnection.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{8F2B0D16-3F9E-4027-B3F6-D84B899BDC71}|WaitListApp\\WaitListApp.csproj|C:\\Users\\e632\\Documents\\GitHub\\Digital-Waitlist-App\\waitlistapp\\app.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
-      "RelativeMoniker": "D:0:0:{8F2B0D16-3F9E-4027-B3F6-D84B899BDC71}|WaitListApp\\WaitListApp.csproj|solutionrelative:waitlistapp\\app.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{8F2B0D16-3F9E-4027-B3F6-D84B899BDC71}|WaitListApp\\WaitListApp.csproj|C:\\Users\\e632\\Documents\\GitHub\\Digital-Waitlist-App\\waitlistapp\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
-      "RelativeMoniker": "D:0:0:{8F2B0D16-3F9E-4027-B3F6-D84B899BDC71}|WaitListApp\\WaitListApp.csproj|solutionrelative:waitlistapp\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{8F2B0D16-3F9E-4027-B3F6-D84B899BDC71}|WaitListApp\\WaitListApp.csproj|C:\\Users\\e632\\Documents\\GitHub\\Digital-Waitlist-App\\waitlistapp\\mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{8F2B0D16-3F9E-4027-B3F6-D84B899BDC71}|WaitListApp\\WaitListApp.csproj|solutionrelative:waitlistapp\\mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{8F2B0D16-3F9E-4027-B3F6-D84B899BDC71}|WaitListApp\\WaitListApp.csproj|c:\\users\\e632\\documents\\github\\digital-waitlist-app\\waitlistapp\\views\\dashboard.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{8F2B0D16-3F9E-4027-B3F6-D84B899BDC71}|WaitListApp\\WaitListApp.csproj|solutionrelative:waitlistapp\\views\\dashboard.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
     }
   ],
   "DocumentGroupContainers": [
@@ -70,189 +26,58 @@
       "DocumentGroups": [
         {
           "DockedHeight": 305,
-          "SelectedChildIndex": 6,
+          "SelectedChildIndex": 3,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "UserRepository.cs",
-              "DocumentMoniker": "C:\\Users\\e632\\Documents\\GitHub\\Digital-Waitlist-App\\WaitListApp\\Repositories\\UserRepository.cs",
-              "RelativeDocumentMoniker": "WaitListApp\\Repositories\\UserRepository.cs",
-              "ToolTip": "C:\\Users\\e632\\Documents\\GitHub\\Digital-Waitlist-App\\WaitListApp\\Repositories\\UserRepository.cs",
-              "RelativeToolTip": "WaitListApp\\Repositories\\UserRepository.cs",
-              "ViewState": "AgIAACAAAAAAAAAAAAAAADsAAAAMAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-26T10:53:19.14Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 1,
               "Title": "WaitListRepository.cs",
               "DocumentMoniker": "C:\\Users\\e632\\Documents\\GitHub\\Digital-Waitlist-App\\WaitListApp\\Repositories\\WaitListRepository.cs",
               "RelativeDocumentMoniker": "WaitListApp\\Repositories\\WaitListRepository.cs",
               "ToolTip": "C:\\Users\\e632\\Documents\\GitHub\\Digital-Waitlist-App\\WaitListApp\\Repositories\\WaitListRepository.cs",
               "RelativeToolTip": "WaitListApp\\Repositories\\WaitListRepository.cs",
-              "ViewState": "AgIAADQAAAAAAAAAAAAAAEgAAAAqAAAAAAAAAA==",
+              "ViewState": "AgIAAI8AAAAAAAAAAAAQwKQAAACBAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-26T12:01:46.46Z"
+              "WhenOpened": "2025-06-04T05:13:33.1Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
-              "Title": "DbConnection.cs",
-              "DocumentMoniker": "C:\\Users\\e632\\Documents\\GitHub\\Digital-Waitlist-App\\WaitListApp\\Data\\DbConnection.cs",
-              "RelativeDocumentMoniker": "WaitListApp\\Data\\DbConnection.cs",
-              "ToolTip": "C:\\Users\\e632\\Documents\\GitHub\\Digital-Waitlist-App\\WaitListApp\\Data\\DbConnection.cs",
-              "RelativeToolTip": "WaitListApp\\Data\\DbConnection.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABkAAAAAAAAAAAAAAA==",
+              "DocumentIndex": 2,
+              "Title": "UserRepository.cs",
+              "DocumentMoniker": "C:\\Users\\e632\\Documents\\GitHub\\Digital-Waitlist-App\\WaitListApp\\Repositories\\UserRepository.cs",
+              "RelativeDocumentMoniker": "WaitListApp\\Repositories\\UserRepository.cs",
+              "ToolTip": "C:\\Users\\e632\\Documents\\GitHub\\Digital-Waitlist-App\\WaitListApp\\Repositories\\UserRepository.cs",
+              "RelativeToolTip": "WaitListApp\\Repositories\\UserRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-26T10:46:24.761Z"
+              "WhenOpened": "2025-06-04T05:13:32.401Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 3,
               "Title": "Dashboard.xaml",
               "DocumentMoniker": "C:\\Users\\e632\\Documents\\GitHub\\Digital-Waitlist-App\\WaitListApp\\Views\\Dashboard.xaml",
               "RelativeDocumentMoniker": "WaitListApp\\Views\\Dashboard.xaml",
               "ToolTip": "C:\\Users\\e632\\Documents\\GitHub\\Digital-Waitlist-App\\WaitListApp\\Views\\Dashboard.xaml",
               "RelativeToolTip": "WaitListApp\\Views\\Dashboard.xaml",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2025-05-26T09:24:02.553Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "InputPopup.xaml",
-              "DocumentMoniker": "C:\\Users\\e632\\Documents\\GitHub\\Digital-Waitlist-App\\WaitListApp\\Views\\InputPopup.xaml",
-              "RelativeDocumentMoniker": "WaitListApp\\Views\\InputPopup.xaml",
-              "ToolTip": "C:\\Users\\e632\\Documents\\GitHub\\Digital-Waitlist-App\\WaitListApp\\Views\\InputPopup.xaml",
-              "RelativeToolTip": "WaitListApp\\Views\\InputPopup.xaml",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2025-06-02T12:23:37.184Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "Login.xaml",
-              "DocumentMoniker": "C:\\Users\\e632\\Documents\\GitHub\\Digital-Waitlist-App\\WaitListApp\\Views\\Login.xaml",
-              "RelativeDocumentMoniker": "WaitListApp\\Views\\Login.xaml",
-              "ToolTip": "C:\\Users\\e632\\Documents\\GitHub\\Digital-Waitlist-App\\WaitListApp\\Views\\Login.xaml",
-              "RelativeToolTip": "WaitListApp\\Views\\Login.xaml",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2025-05-26T09:23:41.041Z",
+              "WhenOpened": "2025-06-04T05:10:38.757Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "InputPopup.xaml.cs",
-              "DocumentMoniker": "C:\\Users\\e632\\Documents\\GitHub\\Digital-Waitlist-App\\WaitListApp\\Views\\InputPopup.xaml.cs",
-              "RelativeDocumentMoniker": "WaitListApp\\Views\\InputPopup.xaml.cs",
-              "ToolTip": "C:\\Users\\e632\\Documents\\GitHub\\Digital-Waitlist-App\\WaitListApp\\Views\\InputPopup.xaml.cs*",
-              "RelativeToolTip": "WaitListApp\\Views\\InputPopup.xaml.cs*",
-              "ViewState": "AgIAADAAAAAAAAAAAAAQwDkAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-02T12:35:11.319Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 9,
-              "Title": "WaitListModel.cs",
-              "DocumentMoniker": "C:\\Users\\e632\\Documents\\GitHub\\Digital-Waitlist-App\\WaitListApp\\Models\\WaitListModel.cs",
-              "RelativeDocumentMoniker": "WaitListApp\\Models\\WaitListModel.cs",
-              "ToolTip": "C:\\Users\\e632\\Documents\\GitHub\\Digital-Waitlist-App\\WaitListApp\\Models\\WaitListModel.cs",
-              "RelativeToolTip": "WaitListApp\\Models\\WaitListModel.cs",
-              "ViewState": "AgIAADIAAAAAAAAAAAAgwFsAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-26T11:59:23.401Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "UsersModel.cs",
-              "DocumentMoniker": "C:\\Users\\e632\\Documents\\GitHub\\Digital-Waitlist-App\\WaitListApp\\Models\\UsersModel.cs",
-              "RelativeDocumentMoniker": "WaitListApp\\Models\\UsersModel.cs",
-              "ToolTip": "C:\\Users\\e632\\Documents\\GitHub\\Digital-Waitlist-App\\WaitListApp\\Models\\UsersModel.cs",
-              "RelativeToolTip": "WaitListApp\\Models\\UsersModel.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-26T11:59:43.381Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 10,
-              "Title": "Constants.cs",
-              "DocumentMoniker": "C:\\Users\\e632\\Documents\\GitHub\\Digital-Waitlist-App\\WaitListApp\\Data\\Constants.cs",
-              "RelativeDocumentMoniker": "WaitListApp\\Data\\Constants.cs",
-              "ToolTip": "C:\\Users\\e632\\Documents\\GitHub\\Digital-Waitlist-App\\WaitListApp\\Data\\Constants.cs",
-              "RelativeToolTip": "WaitListApp\\Data\\Constants.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAFAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-03T11:42:40.538Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "Login.xaml.cs",
-              "DocumentMoniker": "C:\\Users\\e632\\Documents\\GitHub\\Digital-Waitlist-App\\WaitListApp\\Views\\Login.xaml.cs",
-              "RelativeDocumentMoniker": "WaitListApp\\Views\\Login.xaml.cs",
-              "ToolTip": "C:\\Users\\e632\\Documents\\GitHub\\Digital-Waitlist-App\\WaitListApp\\Views\\Login.xaml.cs",
-              "RelativeToolTip": "WaitListApp\\Views\\Login.xaml.cs",
-              "ViewState": "AgIAADYAAAAAAAAAAAApwCQAAAAMAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-26T09:26:48.928Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
               "Title": "Dashboard.xaml.cs",
               "DocumentMoniker": "C:\\Users\\e632\\Documents\\GitHub\\Digital-Waitlist-App\\WaitListApp\\Views\\Dashboard.xaml.cs",
               "RelativeDocumentMoniker": "WaitListApp\\Views\\Dashboard.xaml.cs",
               "ToolTip": "C:\\Users\\e632\\Documents\\GitHub\\Digital-Waitlist-App\\WaitListApp\\Views\\Dashboard.xaml.cs",
               "RelativeToolTip": "WaitListApp\\Views\\Dashboard.xaml.cs",
-              "ViewState": "AgIAAFMAAAAAAAAAAAAhwGEAAAA5AAAAAAAAAA==",
+              "ViewState": "AgIAAA8AAAAAAAAAAAAywKkAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-26T11:55:22.685Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 12,
-              "Title": "App.xaml",
-              "DocumentMoniker": "C:\\Users\\e632\\Documents\\GitHub\\Digital-Waitlist-App\\WaitListApp\\App.xaml",
-              "RelativeDocumentMoniker": "WaitListApp\\App.xaml",
-              "ToolTip": "C:\\Users\\e632\\Documents\\GitHub\\Digital-Waitlist-App\\WaitListApp\\App.xaml",
-              "RelativeToolTip": "WaitListApp\\App.xaml",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2025-05-26T09:20:36.71Z",
+              "WhenOpened": "2025-05-26T11:55:22.685Z",
               "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 13,
-              "Title": "MainWindow.xaml",
-              "DocumentMoniker": "C:\\Users\\e632\\Documents\\GitHub\\Digital-Waitlist-App\\WaitListApp\\MainWindow.xaml",
-              "RelativeDocumentMoniker": "WaitListApp\\MainWindow.xaml",
-              "ToolTip": "C:\\Users\\e632\\Documents\\GitHub\\Digital-Waitlist-App\\WaitListApp\\MainWindow.xaml",
-              "RelativeToolTip": "WaitListApp\\MainWindow.xaml",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2025-05-26T09:17:17.78Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 14,
-              "Title": "MainWindow.xaml.cs",
-              "DocumentMoniker": "C:\\Users\\e632\\Documents\\GitHub\\Digital-Waitlist-App\\WaitListApp\\MainWindow.xaml.cs",
-              "RelativeDocumentMoniker": "WaitListApp\\MainWindow.xaml.cs",
-              "ToolTip": "C:\\Users\\e632\\Documents\\GitHub\\Digital-Waitlist-App\\WaitListApp\\MainWindow.xaml.cs",
-              "RelativeToolTip": "WaitListApp\\MainWindow.xaml.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-26T09:17:17.396Z"
             }
           ]
         },
