@@ -13,7 +13,7 @@ namespace WaitListApp.Data
     internal class DbConnection
     {
 
-            private static string connStr = "Host=localhost;Username=postgres;Database=waitListApp";
+            private static string connStr = "Host=localhost;Username=postgres;Password=admin@eagle;Database=waitListApp";
 
             public static NpgsqlConnection GetConnection()
             {

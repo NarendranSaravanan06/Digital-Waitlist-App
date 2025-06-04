@@ -57,5 +57,15 @@ namespace WaitListApp.Repositories
             var result = cmd.ExecuteScalar(); // returns count
             return result != null && result is bool isLoggedIn && isLoggedIn;
         }
+
+        public void logout(string username)
+        {
+            var conn= Data.DbConnection.GetConnection();
+            conn.Open();
+            string logoutQuery = "UPDATE users SET isloggedin = FALSE WHERE username = @username";
+            var logoutCmd = new NpgsqlCommand(logoutQuery, conn);
+            logoutCmd.Parameters.AddWithValue("username", username);
+            logoutCmd.ExecuteNonQuery();
+        }
     }
 }

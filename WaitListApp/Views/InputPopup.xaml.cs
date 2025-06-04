@@ -1,4 +1,5 @@
-﻿using System.Linq;
+﻿using System;
+using System.Linq;
 using System.Windows;
 using System.Windows.Controls;
 using WaitListApp.Models;
@@ -7,20 +8,29 @@ namespace WaitListApp.Views
 {
     public partial class InputPopup : Window
     {
-        public string UserName => txtName.Text;
-        public string Email => txtEmail.Text;
-        public string PhoneNo => txtPhNo.Text;
+        public string UserName => txtName.Text.Trim();
+        public string Email => txtEmail.Text.Trim();
+        public string PhoneNo => txtPhNo.Text.Trim();
         public string Status => (cbStatus.SelectedItem as ComboBoxItem)?.Content.ToString() ?? "Waiting";
+        public TimeSpan InTime => TimeSpan.TryParse(txtInTime.Text, out var t) ? t : DateTime.Now.TimeOfDay;
+        public TimeSpan? OutTime => TimeSpan.TryParse(txtOutTime.Text, out var t) ? t : (TimeSpan?)null;
+        public DateTime SelectedDate => dpDate.SelectedDate ?? DateTime.Today;
 
         public InputPopup(WaitListModel existingEntry = null)
         {
             InitializeComponent();
+
+            txtInTime.Text = DateTime.Now.ToString("HH:mm");
+            dpDate.SelectedDate = DateTime.Today;
 
             if (existingEntry != null)
             {
                 txtName.Text = existingEntry.Name;
                 txtEmail.Text = existingEntry.Email;
                 txtPhNo.Text = existingEntry.PhoneNo;
+                txtInTime.Text = existingEntry.InTime.ToString(@"hh\:mm");
+                txtOutTime.Text = existingEntry.OutTime?.ToString(@"hh\:mm") ?? "";
+                dpDate.SelectedDate = existingEntry.Date;
 
                 foreach (ComboBoxItem item in cbStatus.Items)
                 {
@@ -37,29 +47,34 @@ namespace WaitListApp.Views
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-            string name = txtName.Text.Trim();
-            string email = txtEmail.Text.Trim();
-            string phone = txtPhNo.Text.Trim();
-            string status = (cbStatus.SelectedItem as ComboBoxItem)?.Content.ToString();
-
-            if (string.IsNullOrWhiteSpace(name))
+            if (string.IsNullOrWhiteSpace(UserName))
             {
                 MessageBox.Show("Name is required."); txtName.Focus(); return;
             }
 
-            if (string.IsNullOrWhiteSpace(email) || !email.Contains("@") || !email.Contains("."))
+            if (string.IsNullOrWhiteSpace(Email) || !Email.Contains("@") || !Email.Contains("."))
             {
                 MessageBox.Show("Valid email is required."); txtEmail.Focus(); return;
             }
 
-            if (string.IsNullOrWhiteSpace(phone) || phone.Length != 10 || !phone.All(char.IsDigit))
+            if (string.IsNullOrWhiteSpace(PhoneNo) || PhoneNo.Length != 10 || !PhoneNo.All(char.IsDigit))
             {
                 MessageBox.Show("Valid phone number is required."); txtPhNo.Focus(); return;
             }
 
-            if (string.IsNullOrWhiteSpace(status))
+            if (!TimeSpan.TryParse(txtInTime.Text, out _))
             {
-                MessageBox.Show("Please select a status."); cbStatus.Focus(); return;
+                MessageBox.Show("Enter valid In Time (HH:mm)."); txtInTime.Focus(); return;
+            }
+
+            if (!string.IsNullOrWhiteSpace(txtOutTime.Text) && !TimeSpan.TryParse(txtOutTime.Text, out _))
+            {
+                MessageBox.Show("Enter valid Out Time (HH:mm) or leave it empty."); txtOutTime.Focus(); return;
+            }
+
+            if (dpDate.SelectedDate == null)
+            {
+                MessageBox.Show("Please select a valid date."); dpDate.Focus(); return;
             }
 
             DialogResult = true;

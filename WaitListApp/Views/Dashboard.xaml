@@ -3,35 +3,47 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-        xmlns:local="clr-namespace:WaitListApp.Views"
+        xmlns:sys="clr-namespace:System;assembly=mscorlib"
         mc:Ignorable="d"
-        Title="Dashboard" Height="450" Width="800">
+        Title="Dashboard"
+        Height="600"
+        Width="900"
+        Background="#1e1e2f"
+        Foreground="White"
+        FontFamily="Segoe UI"
+        WindowStartupLocation="CenterScreen">
 
-        <Grid Margin="10,10,10,12">
-            <Grid.RowDefinitions>
-                <RowDefinition Height="Auto"/>
-                <RowDefinition Height="*"/>
-            </Grid.RowDefinitions>
+    <Grid Margin="20">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
 
-            <!-- Buttons -->
-            <StackPanel Orientation="Horizontal" Margin="0,0,0,10">
-                <Button Content="Add" Width="80" Margin="5" Click="Add_Click"/>
-                <Button Content="Update" Width="80" Margin="5" Click="Update_Click"/>
-                <Button Content="Edit" Width="80" Margin="5" Click="Edit_Click"/>
-                <Button Content="Refresh" Width="80" Margin="5" Click="Refresh_click"/>
-                <Button Content="Delete" Click="Delete_Click" Margin="5" Width="80" Height="30"/>
-
+        <!-- Header Buttons -->
+        <StackPanel Orientation="Horizontal" HorizontalAlignment="Left" Margin="0,0,0,10" VerticalAlignment="Center">
+            <Button Content="Add" Width="100" Margin="5" Height="35" Background="#4CAF50" Foreground="White" Click="Add_Click"/>
+            <Button Content="Update" Width="100" Margin="5" Height="35" Background="#2196F3" Foreground="White" Click="Update_Click"/>
+            <Button Content="Edit" Width="100" Margin="5" Height="35" Background="#FFC107" Foreground="Black" Click="Edit_Click"/>
+            <Button Content="Refresh" Width="100" Margin="5" Height="35" Background="#9C27B0" Foreground="White" Click="Refresh_click"/>
+            <Button Content="Delete" Width="100" Margin="5" Height="35" Background="#F44336" Foreground="White" Click="Delete_Click"/>
+            <Button Content="Logout" Width="100" Margin="150,5,5,5" Height="35" Background="#607D8B" Foreground="White" Click="Logout_Click"/>
         </StackPanel>
 
-            <!-- DataGrid -->
         <!-- DataGrid -->
         <DataGrid x:Name="dgWaitlist"
-          Grid.Row="1"
-          AutoGenerateColumns="False"
-          HeadersVisibility="Column"
-          CanUserAddRows="False">
+                  Grid.Row="1"
+                  AutoGenerateColumns="False"
+                  HeadersVisibility="Column"
+                  CanUserAddRows="False"
+                  Background="White"
+                  Foreground="Black"
+                  RowBackground="White"
+                  AlternatingRowBackground="#f1f1f1"
+                  BorderBrush="Gray"
+                  SelectionMode="Single"
+                  FontSize="14">
 
-            <!-- Row style for highlighting modified rows -->
+            <!-- Highlight modified rows -->
             <DataGrid.RowStyle>
                 <Style TargetType="DataGridRow">
                     <Style.Triggers>
@@ -46,19 +58,53 @@
                 <DataGridTextColumn Header="SNo" Binding="{Binding SNo}" Width="50"/>
                 <DataGridTextColumn Header="Name" Binding="{Binding Name}" Width="*"/>
                 <DataGridTextColumn Header="Email" Binding="{Binding Email}" Width="*"/>
-                <DataGridTextColumn Header="PhoneNo" Binding="{Binding PhoneNo}" Width="*"/>
+                <DataGridTextColumn Header="Phone No." Binding="{Binding PhoneNo}" Width="*"/>
+
+                <!-- Status Dropdown -->
                 <DataGridComboBoxColumn Header="Status" SelectedItemBinding="{Binding Status}" Width="120">
                     <DataGridComboBoxColumn.ItemsSource>
-                        <x:Array Type="{x:Type sys:String}" xmlns:sys="clr-namespace:System;assembly=mscorlib">
+                        <x:Array Type="{x:Type sys:String}">
                             <sys:String>Waiting</sys:String>
                             <sys:String>Completed</sys:String>
                             <sys:String>Cancelled</sys:String>
                         </x:Array>
                     </DataGridComboBoxColumn.ItemsSource>
                 </DataGridComboBoxColumn>
+
+                <!-- InTime Column -->
+                <DataGridTemplateColumn Header="In Time" Width="100">
+                    <DataGridTemplateColumn.CellTemplate>
+                        <DataTemplate>
+                            <TextBlock Text="{Binding InTime, StringFormat='hh\\:mm'}" />
+                        </DataTemplate>
+                    </DataGridTemplateColumn.CellTemplate>
+                    <DataGridTemplateColumn.CellEditingTemplate>
+                        <DataTemplate>
+                            <TextBox Text="{Binding InTime, Mode=TwoWay, StringFormat='hh\\:mm'}" />
+                        </DataTemplate>
+                    </DataGridTemplateColumn.CellEditingTemplate>
+                </DataGridTemplateColumn>
+
+                <!-- OutTime Column -->
+                <DataGridTemplateColumn Header="Out Time" Width="100">
+                    <DataGridTemplateColumn.CellTemplate>
+                        <DataTemplate>
+                            <TextBlock Text="{Binding OutTime, StringFormat='hh\\:mm'}" />
+                        </DataTemplate>
+                    </DataGridTemplateColumn.CellTemplate>
+                    <DataGridTemplateColumn.CellEditingTemplate>
+                        <DataTemplate>
+                            <TextBox Text="{Binding OutTime, Mode=TwoWay, StringFormat='hh\\:mm'}" />
+                        </DataTemplate>
+                    </DataGridTemplateColumn.CellEditingTemplate>
+                </DataGridTemplateColumn>
+
+                <!-- Date Column -->
+                <DataGridTextColumn Header="Date"
+                        Binding="{Binding Date, StringFormat=dd/MM/yyyy}"
+                        Width="120"
+                        IsReadOnly="True"/>
             </DataGrid.Columns>
         </DataGrid>
-
     </Grid>
-    </Window>
-
+</Window>

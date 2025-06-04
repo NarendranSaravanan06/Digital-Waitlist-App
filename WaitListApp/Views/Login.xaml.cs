@@ -12,6 +12,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
 using MaterialDesignThemes.Wpf;
+using WaitListApp.Data;
 using WaitListApp.Repositories;
 namespace WaitListApp.Views
 {
@@ -48,10 +49,10 @@ namespace WaitListApp.Views
             if (repo.IsRegistered(userName.Text, password.Password))
             {
                 MessageBox.Show("hello " + userName.Text);
-
                 Dashboard dashboard = new Dashboard();
                 dashboard.Show();
                 Close();
+
             }
             else {
                 MessageBox.Show("wrong login");

@@ -100,6 +100,7 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="Data\Constants.cs" />
     <Compile Include="Data\DbConnection.cs" />
     <Compile Include="Models\UsersModel.cs" />
     <Compile Include="Models\WaitListModel.cs" />
