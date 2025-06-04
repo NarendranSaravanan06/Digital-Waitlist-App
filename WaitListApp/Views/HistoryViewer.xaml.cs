@@ -24,30 +24,10 @@ namespace WaitListApp.Views
 
         private void LoadData(DateTime fromDate, DateTime toDate)
         {
-            var repo = new WaitlistRepository();
-            var all = repo.GetByDateRange(fromDate, toDate);
-
-            waitlist = new ObservableCollection<WaitListModel>(
-                all.Select((entry, index) =>
-                {
-                    var model = new WaitListModel
-                    {
-                        SNo = index + 1,
-                        Id = entry.Id,
-                        Name = entry.Name,
-                        Email = entry.Email,
-                        PhoneNo = entry.PhoneNo,
-                        Status = entry.Status,
-                        InTime = entry.InTime,
-                        OutTime = entry.OutTime,
-                        Date = entry.Date
-                    };
-                    model.SetOriginalValues();
-                    return model;
-                }));
-
+            waitlist = WaitlistActionsHelper.LoadWaitlist(fromDate, toDate);
             dgHistory.ItemsSource = waitlist;
         }
+
 
         private void Fetch_Click(object sender, RoutedEventArgs e)
         {

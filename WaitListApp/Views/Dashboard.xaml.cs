@@ -18,32 +18,13 @@ namespace WaitListApp.Views
             LoadTodayData();
         }
 
+       
         private void LoadTodayData()
         {
-            var repo = new WaitlistRepository();
-            var todayList = repo.GetTodayEntries();
-
-            waitlist = new ObservableCollection<WaitListModel>(
-                todayList.Select((entry, index) =>
-                {
-                    var model = new WaitListModel
-                    {
-                        SNo = index + 1,
-                        Id = entry.Id,
-                        Name = entry.Name,
-                        Email = entry.Email,
-                        PhoneNo = entry.PhoneNo,
-                        Status = entry.Status,
-                        InTime = entry.InTime,
-                        OutTime = entry.OutTime,
-                        Date = entry.Date
-                    };
-                    model.SetOriginalValues();
-                    return model;
-                }));
-
+            waitlist = WaitlistActionsHelper.LoadWaitlist(DateTime.Today, DateTime.Today);
             dgWaitlist.ItemsSource = waitlist;
         }
+
 
         private void Refresh_click(object sender, RoutedEventArgs e) => LoadTodayData();
 
