@@ -32,31 +32,38 @@ namespace WaitListApp.Views
                 Close();
             }
         }
-
-        private void userName_TextChanged(object sender, TextChangedEventArgs e)
-        {
-
-        }
-
-        private void password_PasswordChanged(object sender, RoutedEventArgs e)
-        {
-
-        }
-
         private void Button_Click(object sender, RoutedEventArgs e)
         {
             var repo = new UserRepository();
-            if (repo.IsRegistered(userName.Text, password.Password))
-            {
-                MessageBox.Show("hello " + userName.Text);
-                Dashboard dashboard = new Dashboard();
-                dashboard.Show();
-                Close();
+            string username = userName.Text.Trim();
+            string pwd = password.Password;
 
+            if (string.IsNullOrWhiteSpace(username) || string.IsNullOrWhiteSpace(pwd))
+            {
+                MessageBox.Show("Please enter both username and password.", "Missing Fields", MessageBoxButton.OK, MessageBoxImage.Warning);
+                return;
             }
-            else {
-                MessageBox.Show("wrong login");
+
+            if (!repo.UserExists(username))
+            {
+                MessageBox.Show("Username does not exist.", "Login Failed", MessageBoxButton.OK, MessageBoxImage.Error);
+                return;
             }
+
+            if (!repo.IsPasswordCorrect(username, pwd))
+            {
+                MessageBox.Show("Incorrect password. Please try again.", "Login Failed", MessageBoxButton.OK, MessageBoxImage.Error);
+                return;
+            }
+
+            // Successful login
+            repo.IsRegistered(username, pwd); // sets isloggedin true + timer
+            MessageBox.Show($"Welcome, {username}!", "Login Successful", MessageBoxButton.OK, MessageBoxImage.Information);
+
+            Dashboard dashboard = new Dashboard();
+            dashboard.Show();
+            Close();
         }
+
     }
 }

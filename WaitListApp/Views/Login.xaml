@@ -26,8 +26,7 @@
                              Background="#fff"
                              Foreground="#000"
                              Padding="5"
-                             BorderThickness="0"
-                             TextChanged="userName_TextChanged"/>
+                             BorderThickness="0"/>
                 </StackPanel>
 
                 <StackPanel>
@@ -38,8 +37,7 @@
                                  Background="#fff"
                                  Foreground="#000"
                                  Padding="5"
-                                 BorderThickness="0"
-                                 PasswordChanged="password_PasswordChanged"/>
+                                 BorderThickness="0"/>
                 </StackPanel>
 
                 <Button Content="Login"

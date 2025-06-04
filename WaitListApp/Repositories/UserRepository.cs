@@ -45,6 +45,27 @@ namespace WaitListApp.Repositories
             return result > 0;
         }
 
+        public bool UserExists(string username)
+        {
+            var conn = Data.DbConnection.GetConnection();
+            conn.Open();
+            string query = "SELECT COUNT(*) FROM users WHERE username = @username";
+            var cmd = new NpgsqlCommand(query, conn);
+            cmd.Parameters.AddWithValue("username", username);
+            return (long)cmd.ExecuteScalar() > 0;
+        }
+
+        public bool IsPasswordCorrect(string username, string password)
+        {
+            var conn = Data.DbConnection.GetConnection();
+            conn.Open();
+            string query = "SELECT password FROM users WHERE username = @username";
+            var cmd = new NpgsqlCommand(query, conn);
+            cmd.Parameters.AddWithValue("username", username);
+            var result = cmd.ExecuteScalar()?.ToString();
+            return result == password;
+        }
+
         public bool isloggedIn()
         {
             var conn = Data.DbConnection.GetConnection();

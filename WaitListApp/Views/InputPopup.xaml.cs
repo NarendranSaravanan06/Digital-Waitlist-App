@@ -42,11 +42,20 @@ namespace WaitListApp.Views
                 }
 
                 Title = "Update Entry";
+                btnSubmit.Content = "Update";
+            }
+            else
+            {
+                btnSubmit.Content = "Register";
             }
         }
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
+            // Auto-correct common format mistakes
+            txtInTime.Text = txtInTime.Text.Replace('.', ':');
+            txtOutTime.Text = txtOutTime.Text.Replace('.', ':');
+
             if (string.IsNullOrWhiteSpace(UserName))
             {
                 MessageBox.Show("Name is required."); txtName.Focus(); return;
