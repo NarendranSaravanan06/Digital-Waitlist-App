@@ -46,11 +46,13 @@ namespace WaitListApp.Helpers
                 var updatedOutTime = item.OutTime;
 
                 if ((item.OriginalStatus == "Waiting") &&
-                    (item.Status == "Completed" || item.Status == "Cancelled"))
+                (item.Status == "Completed" || item.Status == "Cancelled") &&
+                item.Date.Date == DateTime.Now.Date)
                 {
                     shouldUpdateOutTime = true;
                     updatedOutTime = DateTime.Now.TimeOfDay;
                 }
+
                 else if (item.OutTime != item.OriginalOutTime)
                 {
                     shouldUpdateOutTime = true;

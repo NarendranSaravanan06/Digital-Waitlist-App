@@ -19,6 +19,7 @@ namespace WaitListApp.Views
             InitializeComponent();
             dateFrom.SelectedDate = DateTime.Today;
             dateTo.SelectedDate = DateTime.Today;
+            LoadData(DateTime.Today, DateTime.Today);
         }
 
         private void LoadData(DateTime fromDate, DateTime toDate)
@@ -48,7 +49,7 @@ namespace WaitListApp.Views
             dgHistory.ItemsSource = waitlist;
         }
 
-        private void Refresh_Click(object sender, RoutedEventArgs e)
+        private void Fetch_Click(object sender, RoutedEventArgs e)
         {
             if (dateFrom.SelectedDate == null || dateTo.SelectedDate == null)
             {
