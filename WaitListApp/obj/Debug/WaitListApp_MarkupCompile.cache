@@ -10,11 +10,11 @@ none
 false
 DEBUG;TRACE
 C:\Users\e632\Documents\GitHub\Digital-Waitlist-App\WaitListApp\App.xaml
-41802499498
+51638578508
 
-151543503783
+161212368041
 131-1205955894
-MainWindow.xaml;Views\Dashboard.xaml;Views\InputPopup.xaml;Views\Login.xaml;
+MainWindow.xaml;Views\Dashboard.xaml;Views\HistoryViewer.xaml;Views\InputPopup.xaml;Views\Login.xaml;
 
 False
 

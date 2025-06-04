@@ -26,7 +26,10 @@
             <Button Content="Edit" Width="100" Margin="5" Height="35" Background="#FFC107" Foreground="Black" Click="Edit_Click"/>
             <Button Content="Refresh" Width="100" Margin="5" Height="35" Background="#9C27B0" Foreground="White" Click="Refresh_click"/>
             <Button Content="Delete" Width="100" Margin="5" Height="35" Background="#F44336" Foreground="White" Click="Delete_Click"/>
-            <Button Content="Logout" Width="100" Margin="150,5,5,5" Height="35" Background="#607D8B" Foreground="White" Click="Logout_Click"/>
+            <Button Content="View History" Width="100" Margin="5" Height="35" Background="Indigo" Foreground="White" Click="ViewHistory_Click"/>
+            <Button Content="Logout" Width="100" Margin="70,5,5,5" Height="35" Background="#607D8B" Foreground="White" Click="Logout_Click"/>
+            
+
         </StackPanel>
 
         <!-- DataGrid -->

@@ -93,5 +93,13 @@ namespace WaitListApp.Views
             login.Show();
             Close();
         }
+
+        private void ViewHistory_Click(object sender, RoutedEventArgs e)
+        {
+            var historyWindow = new HistoryViewer();
+            historyWindow.Show();
+            this.Hide(); // Optional: Hide dashboard while history is open
+        }
+
     }
 }

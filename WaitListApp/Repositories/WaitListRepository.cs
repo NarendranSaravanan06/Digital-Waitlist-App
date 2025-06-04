@@ -169,6 +169,40 @@ namespace WaitListApp.Repositories
 
             return list;
         }
+        public List<WaitListModel> GetByDateRange(DateTime from, DateTime to)
+        {
+            var list = new List<WaitListModel>();
+            using (var conn = DbConnection.GetConnection())
+            {
+                conn.Open();
+                string query = "SELECT * FROM waitlist WHERE date BETWEEN @from AND @to ORDER BY date, intime";
+                using (var cmd = new NpgsqlCommand(query, conn))
+                {
+                    cmd.Parameters.AddWithValue("from", from.Date);
+                    cmd.Parameters.AddWithValue("to", to.Date);
+
+                    using (var reader = cmd.ExecuteReader())
+                    {
+                        while (reader.Read())
+                        {
+                            list.Add(new WaitListModel
+                            {
+                                Id = Convert.ToInt32(reader["id"]),
+                                Name = reader["name"].ToString(),
+                                Email = reader["email"].ToString(),
+                                PhoneNo = reader["phoneno"].ToString(),
+                                Status = reader["status"].ToString(),
+                                InTime = TimeSpan.Parse(reader["intime"].ToString()),
+                                OutTime = reader["outtime"] == DBNull.Value ? (TimeSpan?)null : TimeSpan.Parse(reader["outtime"].ToString()),
+                                Date = Convert.ToDateTime(reader["date"])
+                            });
+                        }
+                    }
+                }
+            }
+            return list;
+        }
+
 
     }
 }
