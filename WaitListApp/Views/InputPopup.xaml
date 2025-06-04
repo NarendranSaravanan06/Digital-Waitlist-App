@@ -44,6 +44,7 @@
         <Label Content="Status:" Grid.Row="3" Grid.Column="0" VerticalAlignment="Center" Margin="0,10" Foreground="DarkSeaGreen"/>
         <ComboBox x:Name="cbStatus" Grid.Row="3" Grid.Column="1" Margin="0,10" Height="28">
             <ComboBoxItem Content="Waiting"/>
+            <!--<ComboBoxItem Content="In Progress"/>-->
             <ComboBoxItem Content="Completed"/>
             <ComboBoxItem Content="Cancelled"/>
         </ComboBox>

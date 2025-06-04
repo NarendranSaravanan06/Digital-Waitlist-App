@@ -13,6 +13,7 @@ namespace WaitListApp.Views
     public partial class HistoryViewer : Window
     {
         private ObservableCollection<WaitListModel> waitlist;
+        private Paginator<WaitListModel> paginator;
 
         public HistoryViewer()
         {
@@ -24,9 +25,28 @@ namespace WaitListApp.Views
 
         private void LoadData(DateTime fromDate, DateTime toDate)
         {
-            waitlist = WaitlistActionsHelper.LoadWaitlist(fromDate, toDate);
-            dgHistory.ItemsSource = waitlist;
+            var rawList = WaitlistActionsHelper.LoadWaitlist(fromDate, toDate).ToList();
+            paginator = new Paginator<WaitListModel>(rawList);
+            dgHistory.ItemsSource = paginator.PagedItems;
+            UpdatePageInfo();
         }
+        private void UpdatePageInfo()
+        {
+            txtPageInfo.Text = $"Page {paginator?.CurrentPage ?? 0} of {paginator?.TotalPages ?? 0}";
+        }
+
+        private void Previous_Click(object sender, RoutedEventArgs e)
+        {
+            paginator?.PreviousPage();
+            UpdatePageInfo();
+        }
+
+        private void Next_Click(object sender, RoutedEventArgs e)
+        {
+            paginator?.NextPage();
+            UpdatePageInfo();
+        }
+
 
 
         private void Fetch_Click(object sender, RoutedEventArgs e)

@@ -11,6 +11,7 @@ namespace WaitListApp.Views
     public partial class Dashboard : Window
     {
         private ObservableCollection<WaitListModel> waitlist;
+        private Paginator<WaitListModel> paginator;
 
         public Dashboard()
         {
@@ -21,8 +22,15 @@ namespace WaitListApp.Views
        
         private void LoadTodayData()
         {
-            waitlist = WaitlistActionsHelper.LoadWaitlist(DateTime.Today, DateTime.Today);
-            dgWaitlist.ItemsSource = waitlist;
+            var rawList = WaitlistActionsHelper.LoadWaitlist(DateTime.Today, DateTime.Today).ToList();
+            paginator = new Paginator<WaitListModel>(rawList);
+            dgWaitlist.ItemsSource = paginator.PagedItems;
+            UpdatePageInfo();
+
+        }
+        private void UpdatePageInfo()
+        {
+            txtPageInfo.Text = $"Page {paginator?.CurrentPage ?? 0} of {paginator?.TotalPages ?? 0}";
         }
 
 
@@ -80,6 +88,17 @@ namespace WaitListApp.Views
             var historyWindow = new HistoryViewer();
             historyWindow.Show();
             this.Hide(); // Optional: Hide dashboard while history is open
+        }
+        private void Previous_Click(object sender, RoutedEventArgs e)
+        {
+            paginator?.PreviousPage();
+            UpdatePageInfo();
+        }
+
+        private void Next_Click(object sender, RoutedEventArgs e)
+        {
+            paginator?.NextPage();
+            UpdatePageInfo();
         }
 
     }
