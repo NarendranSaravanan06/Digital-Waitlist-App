@@ -1,0 +1,98 @@
+﻿using System;
+using System.Collections.ObjectModel;
+using System.Windows;
+using WaitListApp.Models;
+using WaitListApp.Repositories;
+using WaitListApp.Views;
+
+namespace WaitListApp.Helpers
+{
+    public static class WaitlistActionsHelper
+    {
+        public static void EditEntry(ObservableCollection<WaitListModel> waitlist, WaitListModel selectedItem, Action reload)
+        {
+            if (selectedItem == null)
+            {
+                MessageBox.Show("Please select an entry to edit.");
+                return;
+            }
+
+            var popup = new InputPopup(selectedItem);
+            if (popup.ShowDialog() == true)
+            {
+                var updatedEntry = new WaitListModel
+                {
+                    Id = selectedItem.Id,
+                    Name = popup.UserName,
+                    Email = popup.Email,
+                    PhoneNo = popup.PhoneNo,
+                    Status = popup.Status,
+                    InTime = popup.InTime,
+                    OutTime = popup.OutTime,
+                    Date = popup.SelectedDate
+                };
+
+                new WaitlistRepository().Update(updatedEntry);
+                reload();
+                MessageBox.Show("Updated successfully!");
+            }
+        }
+
+        public static void UpdateAll(ObservableCollection<WaitListModel> waitlist, Action reload)
+        {
+            foreach (var item in waitlist)
+            {
+                bool shouldUpdateOutTime = false;
+                var updatedOutTime = item.OutTime;
+
+                if ((item.OriginalStatus == "Waiting") &&
+                    (item.Status == "Completed" || item.Status == "Cancelled"))
+                {
+                    shouldUpdateOutTime = true;
+                    updatedOutTime = DateTime.Now.TimeOfDay;
+                }
+                else if (item.OutTime != item.OriginalOutTime)
+                {
+                    shouldUpdateOutTime = true;
+                }
+
+                var updatedEntry = new WaitListModel
+                {
+                    Id = item.Id,
+                    Name = item.Name,
+                    Email = item.Email,
+                    PhoneNo = item.PhoneNo,
+                    Status = item.Status,
+                    InTime = item.InTime,
+                    Date = item.Date,
+                    OutTime = shouldUpdateOutTime ? updatedOutTime : item.OriginalOutTime
+                };
+
+                new WaitlistRepository().Update(updatedEntry);
+            }
+
+            MessageBox.Show("Updated successfully!");
+            reload();
+        }
+
+        public static void DeleteEntry(ObservableCollection<WaitListModel> waitlist, WaitListModel selectedItem, Action reload)
+        {
+            if (selectedItem == null)
+            {
+                MessageBox.Show("Please select an entry to delete.");
+                return;
+            }
+
+            var confirm = MessageBox.Show(
+                $"Are you sure you want to delete:\n\n{selectedItem.Name} ({selectedItem.Email})?",
+                "Confirm Deletion", MessageBoxButton.YesNo, MessageBoxImage.Warning);
+
+            if (confirm == MessageBoxResult.Yes)
+            {
+                new WaitlistRepository().Delete(selectedItem.Id);
+                reload();
+                MessageBox.Show("Deleted successfully!");
+            }
+        }
+    }
+}
