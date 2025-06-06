@@ -26,10 +26,12 @@ namespace WaitListApp.Views
         private void LoadData(DateTime fromDate, DateTime toDate)
         {
             var rawList = WaitlistActionsHelper.LoadWaitlist(fromDate, toDate).ToList();
-            paginator = new Paginator<WaitListModel>(rawList);
+            waitlist = new ObservableCollection<WaitListModel>(rawList); // Important!
+            paginator = new Paginator<WaitListModel>(rawList, 20);
             dgHistory.ItemsSource = paginator.PagedItems;
             UpdatePageInfo();
         }
+
         private void UpdatePageInfo()
         {
             txtPageInfo.Text = $"Page {paginator?.CurrentPage ?? 0} of {paginator?.TotalPages ?? 0}";

@@ -10,11 +10,11 @@ namespace WaitListApp.Helpers
         private readonly IList<T> allItems;
         public ObservableCollection<T> PagedItems { get; private set; }
 
-        public int PageSize { get; }
+        public int PageSize { get;}
         public int CurrentPage { get; private set; } = 1;
         public int TotalPages => (int)Math.Ceiling((double)allItems.Count / PageSize);
 
-        public Paginator(IEnumerable<T> items, int pageSize = 30)
+        public Paginator(IEnumerable<T> items, int pageSize = 50)
         {
             allItems = items.ToList();
             PageSize = pageSize;

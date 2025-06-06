@@ -19,15 +19,16 @@ namespace WaitListApp.Views
             LoadTodayData();
         }
 
-       
+
         private void LoadTodayData()
         {
             var rawList = WaitlistActionsHelper.LoadWaitlist(DateTime.Today, DateTime.Today).ToList();
-            paginator = new Paginator<WaitListModel>(rawList);
+            waitlist = new ObservableCollection<WaitListModel>(rawList); // FIXED: assign to waitlist
+            paginator = new Paginator<WaitListModel>(rawList, 30);
             dgWaitlist.ItemsSource = paginator.PagedItems;
             UpdatePageInfo();
-
         }
+
         private void UpdatePageInfo()
         {
             txtPageInfo.Text = $"Page {paginator?.CurrentPage ?? 0} of {paginator?.TotalPages ?? 0}";

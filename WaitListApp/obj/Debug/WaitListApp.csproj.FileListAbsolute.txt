@@ -106,3 +106,7 @@ C:\Users\e632\Documents\GitHub\Digital-Waitlist-App\WaitListApp\obj\Debug\WaitLi
 C:\Users\e632\Documents\GitHub\Digital-Waitlist-App\WaitListApp\obj\Debug\WaitListApp.pdb
 C:\Users\e632\Documents\GitHub\Digital-Waitlist-App\WaitListApp\obj\Debug\Views\HistoryViewer.baml
 C:\Users\e632\Documents\GitHub\Digital-Waitlist-App\WaitListApp\obj\Debug\Views\HistoryViewer.g.cs
+C:\Users\e632\Documents\GitHub\Digital-Waitlist-App\WaitListApp\bin\Debug\WaitListApp.exe.manifest
+C:\Users\e632\Documents\GitHub\Digital-Waitlist-App\WaitListApp\bin\Debug\WaitListApp.application
+C:\Users\e632\Documents\GitHub\Digital-Waitlist-App\WaitListApp\obj\Debug\WaitListApp.exe.manifest
+C:\Users\e632\Documents\GitHub\Digital-Waitlist-App\WaitListApp\obj\Debug\WaitListApp.application

@@ -41,6 +41,11 @@ namespace WaitListApp.Helpers
 
         public static void UpdateAll(ObservableCollection<WaitListModel> waitlist, Action reload)
         {
+            if (waitlist == null || waitlist.Count == 0)
+            {
+                MessageBox.Show("No waitlist entries to update.");
+                return;
+            }
             foreach (var item in waitlist)
             {
                 bool shouldUpdateOutTime = false;
