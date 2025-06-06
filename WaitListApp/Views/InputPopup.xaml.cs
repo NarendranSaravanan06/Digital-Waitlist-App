@@ -47,6 +47,7 @@ namespace WaitListApp.Views
             else
             {
                 btnSubmit.Content = "Register";
+                cbStatus.SelectedIndex = 0;
             }
         }
 
